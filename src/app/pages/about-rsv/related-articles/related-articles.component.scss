@@ -1,0 +1,74 @@
+@import "../../../../assets/scss/custom";
+
+:host {
+  padding: toREM(43) 0 toREM(69);
+}
+
+.related-articles {
+  &__header {
+    h2,
+    p {
+      text-align: center;
+    }
+
+    h2 {
+      font-size: toREM(26);
+    }
+  }
+
+  &__cta {
+    text-align: center;
+
+    @include media-breakpoint-down(md) {
+      &:not(:last-child) {
+        margin-bottom: toREM(71);
+      }
+    }
+
+    .cta {
+      &-title {
+        margin-bottom: toREM(20);
+      }
+
+      &-btn {
+        padding: toREM(11) toREM(48);
+        font-size: toREM(16);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  :host {
+    padding-bottom: toREM(34);
+  }
+
+  .related-articles {
+    &__header {
+      h2,
+      p {
+        text-align: left;
+      }
+
+      h2 {
+        font-size: toREM(28);
+      }
+    }
+
+    &__cta {
+      margin-bottom: 0;
+      text-align: left;
+
+      .cta {
+        &-title,
+        &-text {
+          text-align: left;
+        }
+
+        &-btn {
+          text-align: left;
+        }
+      }
+    }
+  }
+}

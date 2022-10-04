@@ -1,0 +1,62 @@
+@import '../../../../assets/scss/custom';
+
+.hang {
+  margin-left: 0.4em;
+  margin-bottom: 0.4em;
+
+  &::before {
+    font-size: toREM(7);
+    position: absolute;
+    top: toREM(2);
+    left: -0.8em;
+  }
+
+  &-asterisk {
+    &::before {
+      font-size: toREM(12) !important;
+      top: 0 !important;
+      left: -0.5em !important;
+      content: '*';
+    }
+  }
+
+  &-dagger {
+    &::before {
+      content: '\2020';
+    }
+  }
+
+  &-double-dagger {
+    &::before {
+      content: '\2021';
+    }
+  }
+
+  &-sect {
+    &::before {
+      content: '\00a7';
+    }
+  }
+
+  &-lines {
+    &::before {
+      content: '||';
+    }
+  }
+
+  &-para {
+    &::before {
+      content: '\00b6';
+    }
+  }
+
+  &__small {
+    font-size: toREM(12);
+    top: -.1rem;
+
+    &::before {
+      font-size: toREM(6);
+      top: toREM(0.3);
+    }
+  }
+}

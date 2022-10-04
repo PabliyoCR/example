@@ -1,0 +1,40 @@
+@import "../../../../assets/scss/custom";
+:host {
+    z-index: 10;
+}
+
+.transcript {
+    &__content {
+        width: toREM(303);
+        height: toREM(418);
+        position: absolute;
+        z-index: -1;
+        top: 14px;
+        right: 14px;
+        background-image: url('/assets/images/global/transcript-button/transcript-content-bg@2x.png');
+        background-size: 100% 100%;
+        background-repeat: no-repeat;
+        .content__container {
+            padding: toREM(35) toREM(30) toREM(20);
+            height: 100%;
+        }
+        .content__text {
+            padding-right: toREM(10);
+            height: 100%;
+            overflow-y: scroll;
+            /* width */
+            &::-webkit-scrollbar {
+                width: 5px;
+            }
+            /* Track */
+            &::-webkit-scrollbar-track {
+                background: #ebebeb;
+                margin-top: toREM(15);
+            }
+            /* Handle */
+            &::-webkit-scrollbar-thumb {
+                background: #2fa9df;
+            }
+        }
+    }
+}

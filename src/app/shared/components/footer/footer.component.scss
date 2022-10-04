@@ -1,0 +1,100 @@
+@import '../../../../assets/scss/custom';
+:host {
+    padding-top: toREM(33);
+    padding-bottom: toREM(28);
+    @include media-breakpoint-up(md) {
+        padding-top: toREM(28);
+        padding-bottom: toREM(23);
+    }
+}
+
+.footer {
+    &__nav {
+        @include media-breakpoint-down(md) {
+            margin-bottom: toREM(35);
+        }
+        &__logo {
+            margin: 0 0 toREM(35);
+            @include media-breakpoint-up(md) {
+                margin: toREM(14) 0 0;
+            }
+            .logo {
+                &__container {
+                    width: toREM(145);
+                    height: toREM(37);
+                    svg {
+                        height: 100%;
+                    }
+                    @include media-breakpoint-up(md) {
+                        margin-bottom: toREM(24);
+                    }
+                }
+            }
+        }
+        &__text {
+            text-align: center;
+            margin-bottom: toREM(8);
+            @include media-breakpoint-up(md) {
+                margin-bottom: toREM(12);
+                text-align: right;
+            }
+        }
+        &__item {
+            font-size: toREM(11);
+            line-height: 1.1428571429;
+            @include media-breakpoint-down(md) {
+                font-size: toREM(14);
+                text-align: center;
+                &:not(:last-child) {
+                    margin-bottom: toREM(28);
+                }
+            }
+            @include media-breakpoint-up(md) {
+                &:not(:last-child) {
+                    margin-right: toREM(35);
+                }
+            }
+            a {
+                border-bottom: 1px solid $black;
+                cursor: pointer;
+            }
+        }
+        &__items {
+            @include media-breakpoint-up(md) {
+                margin-left: auto;
+            }
+        }
+    }
+    &__social {
+        margin-bottom: toREM(35);
+        @include media-breakpoint-up(md) {
+            margin-bottom: toREM(38);
+        }
+        // &__container {
+        //   @include media-breakpoint-up(md) {
+        //     margin-left: toREM(53);
+        //   }
+        // }
+        &__icon {
+            &:not(:last-child) {
+                margin-right: toREM(35);
+            }
+            &__instagram {
+                width: toREM(28);
+                height: toREM(28);
+            }
+            &__linkedin {
+                width: toREM(26);
+                height: toREM(26);
+            }
+            &__twitter {
+                width: toREM(30);
+                height: toREM(26);
+            }
+            &__facebook {
+                width: toREM(28);
+                height: toREM(28);
+            }
+        }
+    }
+}

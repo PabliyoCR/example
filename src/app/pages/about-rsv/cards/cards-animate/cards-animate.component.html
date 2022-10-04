@@ -1,0 +1,69 @@
+<div class="flip__card" *ngFor="let flipCard of data; index as i; let last = last">
+  <div class="flip__card__inner position-relative w-100 h-100">
+    <div
+      class="flip__card__front w-100 h-100 position-absolute d-flex flex-column justify-content-between align-items-center text-center">
+      <div class="flip__card__front__svg">
+        <picture app-picture [data]="{
+          image: 'homepage/flip-card/flip-card-front-' + (i + 1),
+          format: '',
+          altext: flipCard.imgAltText,
+          webp: true,
+          mobile: false,
+          width: '75',
+          height: '75'
+        }"></picture>
+      </div>
+      <h4 [innerHTML]="flipCard.frontTitle"></h4>
+      <div class="flip__card__front__flip">
+        <picture app-picture [data]="{
+          image: 'homepage/flip-card/flip',
+          format: '',
+          altext: flipCard.imgAltText,
+          webp: true,
+          mobile: false,
+          width: '28',
+          height: '34'
+        }"></picture>
+      </div>
+    </div>
+    <div
+      class="flip__card__back w-100 h-100 position-absolute d-flex flex-column justify-content-between align-items-center text-center">
+      <div class="flip__card__back__container d-flex flex-column align-items-center">
+        <div class="flip__card__back__svg mb-3">
+          <picture app-picture [data]="{
+            image: 'homepage/flip-card/flip-card-back-' + (i + 1),
+            format: '',
+            altext: flipCard.imgAltText,
+            webp: true,
+            mobile: false,
+            width: '75',
+            height: '75'
+          }"></picture>
+        </div>
+        <div class="flip__card__back__content">
+          <p *ngFor="let textTop of flipCard.back.textTop" [innerHTML]="textTop"
+            class="mb-1"></p>
+          <h5 [innerHTML]="flipCard.back.textBig" class="text-dark mb-1" *ngIf="flipCard.back.textBig"></h5>
+          <p [innerHTML]="flipCard.back.textBottom"></p>
+        </div>
+      </div>
+      <div class="flip__card__back__flip">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="15.872"
+          height="15.872" viewBox="0 0 15.872 15.872">
+          <defs>
+            <clipPath id="clip-path">
+              <path id="Combined_Shape" data-name="Combined Shape"
+                d="M13.6,15.483,7.937,9.824,2.278,15.483A1.334,1.334,0,0,1,.391,13.6L6.051,7.937.391,2.278A1.334,1.334,0,0,1,2.278.391L7.937,6.051,13.6.391a1.334,1.334,0,0,1,1.886,1.886L9.824,7.937,15.483,13.6A1.334,1.334,0,1,1,13.6,15.483Z"
+                fill="#30a9e0" />
+            </clipPath>
+          </defs>
+          <g id="signifier_B_down" data-name="signifier/↪ B_down" transform="translate(-0.001 -0.001)">
+            <path id="Combined_Shape-2" data-name="Combined Shape"
+              d="M13.6,15.483,7.937,9.824,2.278,15.483A1.334,1.334,0,0,1,.391,13.6L6.051,7.937.391,2.278A1.334,1.334,0,0,1,2.278.391L7.937,6.051,13.6.391a1.334,1.334,0,0,1,1.886,1.886L9.824,7.937,15.483,13.6A1.334,1.334,0,1,1,13.6,15.483Z"
+              fill="#30a9e0" />
+          </g>
+        </svg>
+      </div>
+    </div>
+  </div>
+</div>

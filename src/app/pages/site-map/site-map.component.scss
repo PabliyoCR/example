@@ -1,0 +1,20 @@
+@import "../../../assets/scss/custom";
+
+:host {
+  padding: toREM(60) 0 toREM(90);
+}
+
+a,
+p {
+  font-size: toREM(20);
+
+  @include media-breakpoint-up(md) {
+    font-size: toREM(21);
+  }
+}
+
+a {
+  color: $tertiary;
+  font-weight: $font-weight-bold;
+  text-decoration: underline;
+}

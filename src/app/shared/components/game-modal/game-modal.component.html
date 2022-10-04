@@ -1,0 +1,22 @@
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content flex-md-row position-relative">
+    <div class="modal-body mb-3 mb-md-0 me-md-3">
+      <div class="race__game">
+        <!-- using original iframe from https://game-portal.gameloft.com/2093/sites/RSVRacer/ to adapt all screen sizes -->
+        <iframe id="gameModalFrame" class="w-100 h-100" src="https://oms.gameloft.com/iframe/?message=U2FsdGVkX18r446XTeMv93xVT07Ffk9YCrixrOAdW0xYlCIsAUIgfHtmNzPhAW7EPEVdXgLT1zc6Dq9HFPQTUQq3MLCb%2FTcYuyxU%2Fh38RWE%3D" frameborder="0"></iframe>
+      </div>
+    </div>
+    <div class="modal-close" data-bs-dismiss="modal" (click)="resetIFrame()">
+      <picture app-picture [data]="{
+        image: 'racer-game/race-against/collapse-icon',
+        format: 'png',
+        altext: '',
+        webp: true,
+        mobile: false,
+        width: '60',
+        height: '60'
+      }">
+      </picture>
+    </div>
+  </div>
+</div>

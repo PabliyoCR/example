@@ -1,0 +1,9 @@
+@import "../assets/scss/custom";
+
+main {
+  padding-top: toREM(72);
+
+  @include media-breakpoint-up(md) {
+    padding-top: toREM(72);
+  }
+}

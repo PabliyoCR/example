@@ -1,0 +1,165 @@
+@import "../../../../assets/scss/custom";
+
+:host {
+  padding: toREM(68) 0 toREM(60);
+}
+
+.all-infants {
+  &__header {
+    p {
+      margin-bottom: toREM(4);
+    }
+  }
+
+  &__transcript-btn {
+    z-index: 10;
+  }
+
+  &__video {
+    &__container {
+      margin-left: -$container-padding-x;
+      margin-right: -$container-padding-x;
+      margin-bottom: toREM(21);
+
+      video {
+        width: 100%;
+        height: 100%;
+        display: none;
+      }
+
+      .placeholder {
+        cursor: pointer;
+      }
+
+      // @include media-breakpoint-down(md) {
+      //   width: calc(100% + 2rem);
+      //   margin: 0 -1rem;
+      // }
+    }
+
+    &__close {
+      width: toREM(30);
+      height: toREM(30);
+      top: toREM(10);
+      right: toREM(10);
+      z-index: 20;
+      cursor: pointer;
+      // svg {
+      //   width: 100%;
+      //   height: 100%;
+      // }
+    }
+  }
+
+  &__cta-card {
+    margin-top: toREM(36);
+
+    @include media-breakpoint-up(md) {
+      margin-top: toREM(0);
+    }
+  
+    padding: toREM(30) toREM(13);
+    background-color: $primary;
+    border-radius: toREM(25);
+    text-align: left;
+    
+    .cta-card {
+      &__text {
+        margin-bottom: toREM(23);
+      }
+
+      &__btn > a {
+        padding: toREM(17) toREM(14);
+        border-radius: toREM(34);
+        font-size: toREM(16);
+      }
+    }
+  }
+}
+
+.social {
+  &__icon {
+    display: inline-block;
+    margin-right: toREMMobile(6);
+
+    @include media-breakpoint-up(md) {
+      margin-right: toREM(20);
+    }
+
+    &__twitter {
+      width: toREM(25);
+      height: toREM(21);
+    }
+
+    &__linkedin {
+      width: toREM(22);
+      height: toREM(22);
+    }
+  }
+}
+
+button {
+  min-height: toREM(58);
+  padding-left: toREM(28);
+  padding-right: toREM(28);
+  margin-bottom: toREMMobile(23);
+
+  @include media-breakpoint-up(md) {
+    margin: toREM(15);
+  }
+
+  @include media-breakpoint-down(md) {
+    width: 100%;
+  }
+}
+
+@include media-breakpoint-up(md) {
+  :host {
+    padding: toREM(31) 0 toREM(24);
+  }
+
+  .all-infants {
+    &__header {
+      p {
+        margin-bottom: toREM(38);
+      }
+    }
+
+    &__transcript-btn {
+      height: toREM(52);
+    }
+
+    &__video {
+      width: toREM(946);
+      margin-bottom: toREM(25);
+
+      &__container {
+        max-width: toREM(861);
+        margin: 0;
+      }
+    }
+
+    &__cta-card {
+      width: toREM(860);
+      margin-left: auto;
+      margin-right: calc(100% - #{toREM(970)});
+      padding: toREM(19) toREM(32) toREM(17) toREM(46);
+
+      .cta-card {
+        &__text {
+          h3 {
+            font-size: toREM(20);
+          }
+          p {
+            font-size: toREM(14);
+          }
+        }
+
+        &__btn > a {
+          padding: toREM(15) toREM(30);
+          width: toREM(205);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,51 @@
+@import "../../../../assets/scss/custom";
+
+:host {
+  padding: toREM(39) 0 toREM(55);
+}
+
+.expert-discussions {
+  &__header {
+    margin-bottom: toREM(19);
+  }
+
+  &__cta {
+    @include media-breakpoint-down(md) {
+      margin-bottom: toREM(35);
+    }
+
+    a {
+      width: toREM(182);
+      padding: toREM(11) toREM(20);
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  :host {
+    padding: toREM(39) 0 toREM(32);
+  }
+
+  .expert-discussions {
+    &__header {
+      margin-bottom: toREM(28);
+
+      h2 {
+        font-size: toREM(48);
+      }
+    }
+  
+
+    //expert gallery image
+    &__experts-gallery {
+      margin-bottom: toREM(38);
+    }
+
+    &__cta {  
+      a {
+        padding: toREM(9) toREM(28);
+        font-size: toREM(16);
+      }
+    }
+  }
+}

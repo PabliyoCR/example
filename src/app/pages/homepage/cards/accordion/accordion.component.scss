@@ -1,0 +1,39 @@
+@import "../../../../../assets/scss/custom";
+
+.accordion {
+  &-button {
+    font-size: inherit;
+    border-radius: toREM(20);
+
+    &::after {
+      height: toREM(12);
+    }
+
+    padding-top: toREM(29);
+    padding-bottom: toREM(17);
+  }
+
+  &-body {
+    padding-bottom: toREM(23);
+
+    small{
+      strong.highlight{
+        font-size: toREM(22);
+      }
+    }
+  }
+
+  &-item {
+    &:not(:last-child) {
+      margin-bottom: toREM(22);
+    }
+
+    border-radius: toREM(20);
+  }
+
+  &__button {
+    padding-left: toREM(20);
+    padding-right: toREM(20);
+  }
+
+}

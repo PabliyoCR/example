@@ -1,0 +1,40 @@
+@import '../../../../assets/scss/custom';
+
+:host {
+  box-shadow: 0px 0px toREM(10) 0px rgba($black, 0.11);
+
+  &:not(:last-child) {
+    margin-bottom: toREM(30);
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: toREM(48);
+    }
+  }
+}
+
+.card {
+  &-body {
+    padding-top: toREM(9);
+    padding-bottom: toREM(9);
+    min-height: toREM(108);
+
+    @include media-breakpoint-up(md) {
+      padding-top: toREM(26);
+      padding-bottom: toREM(13);
+      min-height: toREM(110);
+    }
+  }
+
+  &-footer {
+    padding: toREM(14) 0;
+
+    @include media-breakpoint-up(md) {
+      padding: toREM(18) 0;
+    }
+
+    p {
+      font-size: toREM(18);
+      line-height: 1.1666666667;
+    }
+  }
+}

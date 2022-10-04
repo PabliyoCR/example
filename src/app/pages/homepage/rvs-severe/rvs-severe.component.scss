@@ -1,0 +1,45 @@
+@import "../../../../assets/scss/custom";
+
+:host {
+  padding: toREM(36) 0 toREM(23);
+}
+
+.rvs {
+  &__severe {
+    h2,
+    h3,
+    p {
+      text-align: center;
+      sup{
+        top: -0.8em;
+      }
+    }
+
+    &__small > small{
+      font-size: toREM(10);
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  :host {
+    padding: toREM(31) 0 toREM(16);
+  }
+
+  .rvs {
+    &__severe {
+      p {
+        font-size: toREM(24);
+      }
+
+      h3 {
+        font-size: toREM(28);
+      }
+
+      &__small > small{
+        font-size: toREM(14);
+      }
+    }
+  }
+}
+

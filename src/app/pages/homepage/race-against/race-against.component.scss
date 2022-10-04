@@ -1,0 +1,92 @@
+@import "../../../../assets/scss/custom";
+
+:host {
+  padding: toREM(73) 0 toREM(55);
+}
+
+@include media-breakpoint-down(md) {
+  h2 {
+    font-size: toREM(36);
+    text-align: center;
+  }
+}
+
+.race {
+  &__video {
+    @include media-breakpoint-down(md) {
+      width: calc(100% + 2rem);
+      margin: 0 -1rem;
+    }
+  }
+
+  &__text {
+    p {
+      margin-bottom: toREM(37);
+    }
+  }
+
+  &__img {
+    @include media-breakpoint-down(md) {
+      margin-bottom: toREM(32);
+      text-align: center;
+    }
+  }
+
+  &__btn {
+    width: toREM(182);
+  }
+}
+
+.carousel-indicators{
+  margin-bottom: 0;
+  bottom: -6%;
+
+  button{
+    width: toREM(15);
+		height: toREM(15);
+		background: rgba(163, 163, 163, 1);
+    border-top: unset;
+    // border-bottom: unset;
+		// border-radius: 100%; 
+  }
+
+}
+
+.dots{
+  &__dot{
+    width: toREM(14);
+    height: toREM(14);
+    margin-right:toREM(15);
+    background: rgba(163, 163, 163, 1);
+    border-radius: 100%; 
+    opacity: .5;
+
+    &--active{
+      opacity: 1;
+    }
+  }
+}
+
+a.btn {
+  padding: toREM(9) toREM(45);
+  font-size: toREM(16);
+}
+
+@include media-breakpoint-up(md) {
+  :host {
+    padding: toREM(59) 0 toREM(51);
+  }
+
+  .race {
+    width: toREM(784);
+
+    &__text {
+      width: toREM(420);
+
+      p {
+        margin-bottom: toREM(34);
+        width: toREM(325);
+      }
+    }
+  }
+}

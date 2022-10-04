@@ -1,0 +1,50 @@
+@import "../../../../assets/scss/custom";
+:host {
+    @include media-breakpoint-down(md) {
+        padding: toREM(20) 0;
+    }
+}
+
+.modal {
+    &-dialog {
+        max-width: $modal-sm;
+        margin: 0px auto;
+        @include media-breakpoint-up(md) {
+            max-width: toREM(900);
+        }
+        @include media-breakpoint-up(lg) {
+            max-width: toREM(600);
+        }
+    }
+    &-content {
+        // padding: toREM(58) toREM(22) toREM(55) toREM(22);
+        background: none;
+        border: none;
+        @include media-breakpoint-up(md) {
+            padding: toREM(48) 0 toREM(35) 0;
+        }
+    }
+    &-body {
+        padding: 0;
+        @include media-breakpoint-up(md) {
+            width: toREM(471);
+        }
+        .race__game {
+            width: 100%;
+            height: toREM(600);
+            border: solid 8px $secondary;
+            @include media-breakpoint-up(md) {
+                height: 89vh;
+            }
+        }
+    }
+    &-close {
+        width: toREM(60);
+        height: toREM(60);
+        cursor: pointer;
+        align-self: end;
+        @include media-breakpoint-up(md) {
+            align-self: flex-start;
+        }
+    }
+}

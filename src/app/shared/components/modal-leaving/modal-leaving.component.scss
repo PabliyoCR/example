@@ -1,0 +1,46 @@
+@import '../../../../assets/scss/custom';
+
+.modal {
+  &-close {
+    width: toREM(20);
+    height: toREM(20);
+    top: toREM(14);
+    right: toREM(17);
+    cursor: pointer;
+  }
+
+  &-body { 
+    padding: toREM(46) toREM(16) toREM(25);
+
+    h2 {
+      font-size: toREM(31);
+      text-transform: none;
+    }
+
+    p {
+      font-size: toREM(14);
+    }
+  }
+
+  &-buttons {
+    margin: 0 auto;
+    
+    @include media-breakpoint-up(md) {
+      margin: 0 toREM(60);
+    }
+
+    button {
+      width: toREM(150);
+      padding: toREM(12) toREM(25);
+      
+
+      font-size: toREM(16);
+      
+
+      &:focus {
+        box-shadow: none;
+        background-color: $primary;
+      }
+    }
+  }
+}

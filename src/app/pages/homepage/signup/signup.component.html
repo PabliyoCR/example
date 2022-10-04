@@ -1,0 +1,44 @@
+<div class="container-md">
+  <div class="row">
+    <div class="col-12">
+      <div class="signup__container d-md-flex justify-content-md-between">
+        <div class="signup__left mb-md-0 mt-5 mt-md-0">
+          <h2 class="display-1 mb-3 mb-md-2">SIGN UP FOR THE RSV&nbsp;SPEAKER SERIES AND RAISE YOUR VOICE AGAINST RSV WITH COMMUNITY PEERS
+          </h2>
+          <p class="mb-4">The RSV Speaker Series is an expert-led, peer community roundtable series to talk about RSV topics. Virtually participate in live events and stay up to speed on the rapidly changing environment of RSV care.</p>
+          <p class="lead mb-4"><strong>Register to receive RSV updates from Sanofi Pasteur.</strong></p>
+         <!-- <form [formGroup]="form" (ngSubmit)="submitForm($event)">
+            <div *ngFor="let control of controls; let last = last" [ngClass]="{'mb-3': !last, 'mb-4': last}">
+              <input [type]="control.type" class="form-control" [id]="control.id" [placeholder]="control.placeholder"
+                [formControlName]="control.id" [attr.maxlength]="control.maxLength"
+                [ngClass]="{'form__invalid': !form.get(control.id)?.valid && form.get(control.id)?.touched}">
+            </div>
+           
+          </form>
+          -->
+          <a href="#" [attr.data-bs-toggle]="'modal'" [attr.data-bs-target]="'#formModal'">
+            <button type="button" class="btn btn-primary">GET UPDATES</button>
+          </a>
+        </div>
+        <div class="signup__right">
+          <div class="signup__right__image">
+            <picture app-picture [data]="{
+              image: 'homepage/signup/gallery',
+              format: '',
+              altext: 'Man speaking to community peers, Woman speaking to community peers, Round-table discussion with KOLs, KOL presenting slides',
+              webp: true,
+              mobile: true,
+              classes: '',
+              width: '601',
+              height: '604'
+            }">
+            </picture>
+          </div>
+          <small class="mt-2">Photos provided courtesy of The Inception Company. Pando is a registered trademark and all
+            rights are
+            reserved.</small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

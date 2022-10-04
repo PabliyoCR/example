@@ -1,0 +1,40 @@
+<div class="transcript__button" (click)="isOpen = !isOpen">
+  <div class="button__open" *ngIf="!isOpen">
+    <picture
+      app-picture
+      [data]="{
+        image: 'global/transcript-button/transcript-blue',
+        format: '',
+        altext: '',
+        webp: true,
+        mobile: false,
+        classes: '',
+        width: '54',
+        height: '50'
+      }"
+    >
+    </picture>
+  </div>
+  <div class="button__close" *ngIf="isOpen">
+    <picture
+      app-picture
+      [data]="{
+        image: 'global/transcript-button/transcript-blue-close',
+        format: '',
+        altext: '',
+        webp: true,
+        mobile: false,
+        classes: '',
+        width: '54',
+        height: '50'
+      }"
+    >
+    </picture>
+  </div>
+</div>
+<div class="transcript__content" *ngIf="isOpen">
+  <div class="content__container">
+    <div class="content__text" [innerHTML]="transcriptText">
+    </div>
+  </div>
+</div>

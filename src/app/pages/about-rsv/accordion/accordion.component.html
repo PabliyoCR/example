@@ -1,0 +1,229 @@
+<div class="container-md">
+    <div class="row">
+        <div class="col-12">
+            <h2 class="accordion__title text-center mb-md-0">
+                Expand your Knowledge
+            </h2>
+            <div class="accordion__container" (click)="openAll($event)">
+                <div class="accordion__button d-flex justify-content-center justify-content-md-end">
+                    <span class="button__label">OPEN ALL</span>
+                    <span class="button__caret" [ngClass]="{ rotated: allOpen }">▼</span>
+                </div>
+                <div class="accordion" id="accordionCollapse">
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="collapseH--1">
+                            <button class="accordion-button d-flex justify-content-between collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse--1" aria-controls="collapse--1">
+                              <h3 class="accordion-button__title mb-0">What is RSV?</h3>
+                              <div class="accordion-button__caret d-flex">
+                                <span class="caret-label open">OPEN</span>
+                                <span class="caret-label close">CLOSE</span>
+                                <span class="caret-arrow">▼</span>
+                              </div>
+                            </button>
+                        </div>
+                        <div id="collapse--1" class="accordion-collapse collapse" aria-labelledby="collapseHeading--1">
+                            <div class="accordion-body">
+                                <div class="what-is-rsv">
+                                    <p>
+                                        Respiratory syncytial virus (RSV) is a common, highly contagious respiratory virus, the transmission of which occurs through the nasopharyngeal or conjunctival mucosa with respiratory secretions from infected
+                                        <span class="text-nowrap">individuals––mostly</span> other children, older siblings, and other family members.<sup>1-3</sup
+                                      >
+                                    </p>
+                                    <p class="mb-0">
+                                      While RSV can infect individuals of any age with varying
+                                      severity of symptoms, it is the leading cause of
+                                      hospitalization in infants under 12 months.<sup>4*</sup>
+                                    </p>
+                                    <p class="fw-bold mb-4 mb-md-3">
+                                        ~72% of all
+                                        <span class="text-nowrap">RSV-hospitalized</span> infants are born at term with no underlying conditions.<sup>5†</sup>
+                                    </p>
+                                    <p class="mb-4">
+                                        Each year in the US, RSV leads to, on average, approximately
+                                    </p>
+                                    <div class="what-is-rsv__picture text-center">
+                                        <picture app-picture [data]="{
+                                          image: 'about-rsv/what-is-rsv/hospitalizations',
+                                          format: 'png',
+                                          altext: '',
+                                          webp: true,
+                                          mobile: true,
+                                          classes: '',
+                                          width: '849',
+                                          height: '116'
+                                        }">
+                                        </picture>
+                                    </div>
+                                    <div class="rsv__footer">
+                                        <p class="mb-0">
+                                            <sup>*</sup>According to a study of pediatric hospitalizations between 1997 and 2000.
+                                        </p>
+                                        <p class="mb-0">
+                                            <sup>†</sup>Surveillance data between October 2014 and April 2015. Among 1,176
+                                            <span class="text-nowrap">RSV-hospitalized</span> infants aged under 12 months, 851 had no reported underlying condition (prematurity was classified as an underlying condition in the study).
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="accordion-item">
+                        <div class="accordion-header" id="collapseH--2">
+                            <button class="accordion-button d-flex justify-content-between collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse--2" aria-controls="'collapse--2">
+                <h3 class="accordion-button__title mb-0">
+                  RSV Seasonality<sup class="button__sup">10§</sup>
+                </h3>
+                <div class="accordion-button__caret d-flex">
+                  <span class="caret-label open">OPEN</span>
+                  <span class="caret-label close">CLOSE</span>
+                  <span class="caret-arrow">▼</span>
+                </div>
+              </button>
+                        </div>
+                        <div id="collapse--2" class="accordion-collapse collapse" aria-labelledby="collapseHeading--2">
+                            <div class="accordion-body">
+                                <div class="rsv-seasonality">
+                                    <div class="rsv-seasonality__top-container d-flex flex-column flex-md-row justify-content-between">
+                                        <div class="top-container__left">
+                                            <div class="rsv-seasonality__picture">
+                                                <picture app-picture [data]="{
+                            image: 'about-rsv/rsv-seasonality/season-chart',
+                            format: 'png',
+                            altext: '',
+                            webp: true,
+                            mobile: true,
+                            classes: 'w-100',
+                            width: '624',
+                            height: '259'
+                          }">
+                                                </picture>
+                                            </div>
+                                        </div>
+                                        <div class="top-container__right">
+                                            <p class="mb-3">
+                                                RSV is seasonal, with infections peaking at certain times throughout the year.<sup>3,7</sup> A typical RSV season runs roughly from November to March, with some exceptions, such as in Florida, where the
+                                                RSV season may start earlier.<sup>8</sup>
+                                            </p>
+                                            <p class="mb-3">
+                                                Unexpected changes in the environment caused by other viral diseases can also affect the seasonality of RSV. For example, public health measures instituted to mitigate the COVID-19 pandemic caused a notable shift in this seasonality. With preventive safety
+                                                measures in place at the height of the pandemic, cases of RSV in infants were relatively nonexistent during the regular RSV season. As safety measures were lifted, RSV cases surged during the summer
+                                                <span class="text-nowrap">months––before</span> the typical season.<sup>9‡</sup>
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <p class="mb-4">
+                                        One common misperception is that an infant born before the RSV season is better protected against the virus than one born during it. However, infants born during the season are exposed to the virus for less time than those born before it. As a result,
+                                        the number of RSV-hospitalized infants born in season vs before the season is roughly equal.<sup>11</sup
+                    >
+                  </p>
+                  <div class="rsv__footer">
+                    <p class="mb-0">
+                      <sup>‡</sup>According to a study of positive polymerase chain reaction tests for RSV patients 0 to 18 years old, between January 2016 and May 2021.
+                                    </p>
+                                    <p class="mb-0">
+                                        <sup>§</sup>Data based on seasonal averages of positive RSV cases, gathered from weekly antigen detections in the US and Canada from March 2019 through April 2022.
+                                    </p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <div class="accordion-header" id="collapseH--3">
+                        <button class="accordion-button d-flex justify-content-between collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapse--3" aria-expanded="false" aria-controls="'collapse--3">
+                <h3 class="accordion-button__title mb-0">
+                  How RSV Progresses<sup class="button__sup">¶</sup>
+                </h3>
+                <div class="accordion-button__caret d-flex">
+                  <span class="caret-label open">OPEN</span>
+                  <span class="caret-label close">CLOSE</span>
+                  <span class="caret-arrow">▼</span>
+                </div>
+              </button>
+                    </div>
+                    <div id="collapse--3" class="accordion-collapse collapse" aria-labelledby="collapseHeading--3">
+                        <div class="accordion-body">
+                            <div class="how-rsv-progresses">
+                                <p class="mb-2 mb-md-3">
+                                    While RSV causes cold-like symptoms in some infants, it can progress to more serious disease in others making it the leading cause of infant hospitalization.<sup>4</sup>
+                                </p>
+                                <div class="how-rsv-progresses__progression d-flex flex-column flex-md-row justify-content-between">
+                                    <div class="how-rsv-progresses__picture text-center mb-3 mb-md-0">
+                                        <picture app-picture [data]="{
+                          image: 'about-rsv/how-rsv-progresses/baby-1',
+                          format: 'png',
+                          altext: '',
+                          webp: true,
+                          mobile: false,
+                          classes: 'mx-auto',
+                          width: '130',
+                          height: '198'
+                        }">
+                                        </picture>
+                                    </div>
+                                    <p class="progression__text mb-2 mb-md-0">
+                                        <strong>At days 1 and 2,</strong> droplets containing RSV from infected contact enters infant’s nasopharynx. There is usually no manifestation of symptoms at this point.
+                                    </p>
+                                    <div class="how-rsv-progresses__picture text-center mb-3 mb-md-0">
+                                        <picture app-picture [data]="{
+                          image: 'about-rsv/how-rsv-progresses/baby-2',
+                          format: 'png',
+                          altext: '',
+                          webp: true,
+                          mobile: false,
+                          classes: 'mx-auto',
+                          width: '130',
+                          height: '198'
+                        }">
+                                        </picture>
+                                    </div>
+                                    <p class="progression__text mb-2 mb-md-0">
+                                        <strong>At days 3 through 5,</strong> nasopharyngeal cells are sloughed and aspirated, carrying
+                                        <br class="d-none d-md-inline" />RSV to lower respiratory tract cells.<sup>12</sup> Symptoms can include: congestion, runny nose, fever, irritability, and poor feeding.
+                                    </p>
+                                    <div class="how-rsv-progresses__picture text-center mb-3 mb-md-0">
+                                        <picture app-picture [data]="{
+                          image: 'about-rsv/how-rsv-progresses/baby-3',
+                          format: 'png',
+                          altext: '',
+                          webp: true,
+                          mobile: false,
+                          classes: 'mx-auto',
+                          width: '130',
+                          height: '198'
+                        }">
+                                        </picture>
+                                    </div>
+                                    <p class="progression__text mb-5 mb-md-0">
+                                        <strong>At days 6 through 8, </strong
+                      ><br class="d-none d-md-inline" />RSV-infected epithelial
+                      cells travel deeper into the infant's lungs, infecting the
+                      bronchioles and alveoli, causing bronchiolitis and/or
+                      pneumonia.<sup>12</sup> Symptoms can include: cough,
+                      excess phlegm, rapid/difficult breathing, wheezing and/or
+                      grunting noises, nasal flaring, and abnormal chest
+                      movement when breathing.
+                    </p>
+                  </div>
+
+                  <p class="mb-4">
+                    Ultimately,
+                    <strong>1 to 2 out of every 100 infants</strong> with RSV who are <strong>younger than 6 months</strong> may need to be hospitalized. Those who are hospitalized may require supportive care such
+                                        as oxygen, intubation, and/or mechanical ventilation.<sup>13</sup>
+                                    </p>
+                                    <div class="rsv__footer">
+                                        <p class="mb-0">
+                                            <sup>¶</sup>This is one example of progression, which can vary in each individual infant.
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

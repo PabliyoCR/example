@@ -1,0 +1,44 @@
+@import "../../../../assets/scss/custom";
+
+:host {
+  padding: toREM(0) 0 toREM(20);
+}
+
+.rvs {
+  &__carousel {
+    width: 100%;
+    height: toREM(360);
+
+    .carousel-item {
+      height: toREM(330);
+    }
+
+    .carousel-indicators {
+      margin-bottom: 0px;
+      
+      button {
+        border-radius: 50%;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  :host {
+    padding: toREM(0) 0 toREM(18);
+  }
+
+  .rvs {
+    &__carousel {
+      width: toREM(600);
+      height: toREM(630);
+
+      .carousel {
+        &-item {
+          width: toREM(600);
+          height: toREM(600);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,237 @@
+@import "../../../../assets/scss/custom";
+
+:host {
+  @include media-breakpoint-down(md) {
+    padding: toREM(20) 0;
+  }
+}
+
+.text-lg-size{
+     @include media-breakpoint-up(md) {
+      font-size: toREM(11) !important;
+    }
+}
+
+.modal {
+  &-dialog {
+    max-width: $modal-sm;
+    margin: 0px auto;
+
+    .text-modal{
+
+      padding-left: toREM(15);
+      padding-right: toREM(22);
+      @include media-breakpoint-up(md) {
+        margin: 0 toREM(37) 0 toREM(42);     
+
+      }
+    }
+    .text-title{
+
+      padding-left: toREM(15);
+      padding-right: toREM(22);
+      @include media-breakpoint-up(md) {
+        margin: 0 toREM(37) 0 toREM(27);     
+      }
+    }
+
+    .text-subtitle{
+      font-size: toREM(16) !important;  
+      @include media-breakpoint-down(md) {
+        font-size: toREM(14.5) !important;  
+      }
+    }
+
+    .text-modal-pass{
+      padding-left: toREM(9);
+      padding-right: toREM(22);
+      @include media-breakpoint-up(md) {
+        padding: 0 toREM(2) 0 toREM(2);
+      }
+    }
+    
+    .text-justify{
+      padding-left: toREM(10);
+      padding-right: toREM(0);
+
+      @include media-breakpoint-up(md) {
+        font-size: toREM(31);
+      }
+      @include media-breakpoint-down(md) {
+        text-align: justify;
+        padding-right: toREM(22);
+      }
+      
+      
+    }
+    @include media-breakpoint-up(md) {
+      max-width: $modal-md;
+    }
+
+    &.thankYou {
+      @include media-breakpoint-up(md) {
+        max-width: toREM(432);
+      }
+
+      .modal-content {
+        padding: toREM(55) toREM(22) toREM(55) toREM(22);
+        
+        button {
+          
+          margin-bottom: toREMMobile(-20);
+        }
+
+        @include media-breakpoint-up(md) {
+          padding: toREM(48) toREM(37) toREM(48) toREM(37);
+        }
+      }
+    }
+  }
+
+  &-content {
+    padding: toREM(58) toREM(0) toREM(39) toREM(0);
+
+    @include media-breakpoint-up(md) {
+      padding: toREM(48) toREM(48) toREM(35) toREM(25);
+    }
+  }
+
+  &-body {
+    padding: 0;
+  }
+
+  &-close {
+    width: toREM(20);
+    height: toREM(20);
+    top: toREM(14);
+    right: toREM(17);
+    cursor: pointer;
+  }
+
+}
+
+
+.form {
+  &__controls {
+    padding-left: toREM(5.70);
+    padding-right: toREM(7.70);
+    @include media-breakpoint-up(md) {
+      max-width: toREM(649);
+    }
+    
+
+    input {
+      &::placeholder {
+        /* Chrome, Firefox, Opera, Safari 10.1+ */
+        font-style: italic;
+      }
+
+      &:-ms-input-placeholder {
+        /* Internet Explorer 10-11 */
+        font-style: italic;
+      }
+
+      &::-ms-input-placeholder {
+        /* Microsoft Edge */
+        font-style: italic;
+      }
+    }
+  }
+
+  &__invalid {
+    border-color: $danger;
+
+    &::placeholder {
+      /* Chrome, Firefox, Opera, Safari 10.1+ */
+      color: $danger;
+    }
+
+    &:-ms-input-placeholder {
+      /* Internet Explorer 10-11 */
+      color: $danger;
+    }
+
+    &::-ms-input-placeholder {
+      /* Microsoft Edge */
+      color: $danger;
+    }
+  }
+
+  &-check {
+    margin-left: toREM(9);
+
+    @include media-breakpoint-down(md) {
+      margin: 0px auto;
+      max-width: toREM(188);
+    }
+
+    @include media-breakpoint-up(md) {
+      margin-left: toREM(17);
+    }
+
+    &-input {
+      margin-left: -1.8em;
+      width: 1.3em;
+      height: 1.3em;
+
+      @include media-breakpoint-up(md) {
+        margin-left: -1.7em;
+        width: 1.2em;
+        height: 1.2em;
+      }
+    }
+  }
+
+  label,
+  small {
+    font-size: toREM(10);
+    line-height: 1.1;
+  }
+
+  small {
+
+    padding-left: toREM(9);
+
+    @include media-breakpoint-up(md) {
+      padding-left: toREM(13);
+    }
+
+    a {
+      text-decoration: underline;
+    }
+  }
+
+  &__initial {
+    h4 {
+      @include media-breakpoint-down(md) {
+        text-align: center;
+      }
+    }
+  }
+
+  &__terms {
+ 
+    @include media-breakpoint-down(md) {
+      //max-width: toREM(264);
+      
+      margin: 0px auto;
+    }
+  }
+}
+
+.btn-submit{
+  padding: toREM(10) toREM(30) toREM(10) toREM(35);
+  @include media-breakpoint-down(md) {
+    font-size: toREM(14.5);
+
+  }
+}
+
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+  transition: background-color 5000s ease-in-out 0s;
+  -webkit-text-fill-color: $gray-500 !important;
+}

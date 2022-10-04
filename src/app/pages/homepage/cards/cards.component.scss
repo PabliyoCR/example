@@ -1,0 +1,9 @@
+@import "../../../../assets/scss/custom";
+
+.hang__block {
+  margin-top: toREM(35);
+
+  @include media-breakpoint-up(md) {
+    margin-top: toREM(51);
+  }
+}

@@ -1,0 +1,20 @@
+<source *ngIf="data.webp && data.mobile"
+  srcset="/assets/images/{{ data.image }}_s.webp, /assets/images/{{ data.image }}_s@2x.webp 2x"
+  media="(max-width: 767px)" type="image/webp" />
+<source *ngIf="data.mobile"
+  srcset="/assets/images/{{ data.image }}_s.{{ data.format === '' ? 'png' : data.format }}, /assets/images/{{ data.image }}_s@2x.{{ data.format === '' ? 'png' : data.format }} 2x"
+  media="(max-width: 767px)" />
+<source *ngIf="data.webp && data.mobile"
+  srcset="/assets/images/{{ data.image }}.webp, /assets/images/{{ data.image }}@2x.webp 2x" media="(min-width: 768px)"
+  type="image/webp" />
+<source *ngIf="data.mobile"
+  srcset="/assets/images/{{ data.image }}.{{ data.format === '' ? 'png' : data.format }}, /assets/images/{{ data.image }}@2x.{{ data.format === '' ? 'png' : data.format }} 2x"
+  media="(min-width: 768px)" />
+<source *ngIf="!data.mobile && data.webp"
+  srcset="/assets/images/{{ data.image }}.webp, /assets/images/{{ data.image }}@2x.webp 2x" type="image/webp" />
+<source *ngIf="!data.mobile"
+  srcset="/assets/images/{{ data.image }}.{{ data.format === '' ? 'png' : data.format }}, /assets/images/{{ data.image }}@2x.{{ data.format === '' ? 'png' : data.format }} 2x" />
+
+<img src="/assets/images/{{ data.image }}.{{ data.format === '' ? 'png' : data.format }}" alt="{{ data.altext }}"
+  [attr.width]="data.width ? data.width : null" [attr.height]="data.height ? data.height : null"
+  class="img-fluid {{ data.classes }}" loading="lazy" />

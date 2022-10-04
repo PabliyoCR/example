@@ -1,0 +1,51 @@
+@import "../../../../assets/scss/custom";
+
+:host {
+  box-shadow: 0px 0px toREM(10) 0px rgba($black, 0.11);
+  overflow: hidden;
+  height: toREMMobile(93);
+  width: toREMMobile(334);
+  margin: 0 auto;
+  &:not(:last-child) {
+    margin-bottom: toREM(30);
+    @include media-breakpoint-up(md) {
+      margin-bottom: toREM(48);
+    }
+  }
+  @include media-breakpoint-up(md) {
+    height: toREM(148);
+    width: toREM(546);
+  }
+}
+
+.download {
+  &__body {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+  }
+  &__image {
+    display: inline-block;
+  }
+  &__icon {
+    padding: toREMMobile(18);
+    @include media-breakpoint-up(md) {
+      padding: toREM(30);
+    }
+    svg {
+      width: toREMMobile(23);
+      height: toREMMobile(23);
+      @include media-breakpoint-up(md) {
+        width: toREM(36);
+        height: toREM(36);
+      }
+    }
+  }
+}
+
+.lead {
+  font-size: toREMMobile(20);
+  @include media-breakpoint-up(md) {
+    font-size: toREM(26);
+  }
+}

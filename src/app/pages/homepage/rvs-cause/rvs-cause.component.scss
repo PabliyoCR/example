@@ -1,0 +1,39 @@
+@import "../../../../assets/scss/custom";
+
+.cause {
+  &__left {
+    small {
+      font-size: toREM(12);
+    }
+
+    @include media-breakpoint-up(md) {
+      max-width: toREM(470);
+    }
+
+    h2 {
+      @include media-breakpoint-down(md) {
+        font-size: toREM(36);
+      }
+    }
+  }
+
+  &__right {
+    margin-top: toREMMobile(35);
+
+    h2 {
+      font-size: toREMMobile(36);
+      margin-bottom: toREMMobile(25);
+    }
+
+    @include media-breakpoint-up(md) {
+      max-width: toREM(387);
+      margin-top: 0;
+
+      h2 {
+        font-size: toREM(50);
+        margin-bottom: toREM(35);
+        line-height: toREM(50);
+      }
+    }
+  }
+}

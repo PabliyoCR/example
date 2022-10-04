@@ -1,0 +1,41 @@
+
+  <div class="d-flex h-100">
+    <div class="download__body w-100 ps-3 ps-md-4">
+      <div class="download__image">
+        <picture app-picture [data]="{
+          image: datos.icon,
+          format: '',
+          altext: 'Download RSV brochure',
+          webp: false,
+          mobile: true,
+          classes: '',
+          width: '',
+          height: ''
+        }">
+        </picture>
+      </div>
+      <div class="lead card-text d-inline  ps-3" [innerHTML]="datos.title">
+      </div>
+    </div>
+    <div class="download__body bg-primary">
+      <div class="download__icon">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 40 40">
+          <title>Download RSV brochure</title>
+          <g id="Icon_download" data-name="Icon/download" transform="translate(2 2)">
+            <g id="Flow_4" data-name="Flow 4">
+              <path id="Flow_4-2" data-name="Flow 4" d="M0-16v8A8,8,0,0,0,8,0H28a8,8,0,0,0,8-8v-8" transform="translate(0 36)" fill="none"/>
+              <path id="Flow_4-3" data-name="Flow 4" d="M0-16v8A8,8,0,0,0,8,0H28a8,8,0,0,0,8-8v-8" transform="translate(0 36)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4"/>
+            </g>
+            <g id="Flow_2" data-name="Flow 2">
+              <path id="Flow_2-2" data-name="Flow 2" d="M2,0V18" transform="translate(16)" fill="none"/>
+              <path id="Flow_2-3" data-name="Flow 2" d="M2,0V18" transform="translate(16)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4"/>
+            </g>
+            <g id="Flow_5" data-name="Flow 5">
+              <path id="Flow_5-2" data-name="Flow 5" d="M0,0V11.314H11.314" transform="translate(10 14) rotate(-45)" fill="none"/>
+              <path id="Flow_5-3" data-name="Flow 5" d="M0,0V11.314H11.314" transform="translate(10 14) rotate(-45)" fill="none" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-miterlimit="10" stroke-width="4"/>
+            </g>
+          </g>
+        </svg>          
+      </div>
+    </div>
+  </div>

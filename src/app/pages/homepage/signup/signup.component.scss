@@ -1,0 +1,63 @@
+@import "../../../../assets/scss/custom";
+
+.signup {
+  &__left {
+    margin-bottom: toREMMobile(60);
+    @include media-breakpoint-up(md) {
+      max-width: toREM(454);
+    }
+
+    .lead {
+      line-height: 1.1818181818;
+    }
+
+    form {
+      @include media-breakpoint-up(md) {
+        max-width: toREM(313);
+      }
+
+      input {
+        &::placeholder {
+          /* Chrome, Firefox, Opera, Safari 10.1+ */
+          font-style: italic;
+        }
+
+        &:-ms-input-placeholder {
+          /* Internet Explorer 10-11 */
+          font-style: italic;
+        }
+
+        &::-ms-input-placeholder {
+          /* Microsoft Edge */
+          font-style: italic;
+        }
+      }
+    }
+
+    h2 {
+      @include media-breakpoint-down(md) {
+        font-size: toREM(36);
+      }
+    }
+  }
+
+  &__right {
+    @include media-breakpoint-up(md) {
+      max-width: toREM(601);
+      flex-shrink: 0;
+    }
+
+    small {
+      font-size: toREM(10);
+    }
+  }
+}
+
+
+// input:-webkit-autofill,
+// input:-webkit-autofill:hover,
+// input:-webkit-autofill:focus,
+// input:-webkit-autofill:active {
+//   transition: background-color 5000s ease-in-out 0s;
+//   -webkit-text-fill-color: $gray-500 !important;
+// }

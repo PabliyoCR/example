@@ -1,0 +1,60 @@
+@import "../../../../assets/scss/custom";
+
+:host {
+  padding: toREM(52) 0;
+}
+
+.rsv-podcast {
+  &__header {
+    margin-bottom: toREM(30);
+
+    h2 {
+      margin-bottom: toREM(36);
+      text-transform: none;
+    }
+  }
+
+  &__cta-card {
+    padding: toREM(19) toREM(25) toREM(39);
+    border: 2px solid $white;
+    border-radius: toREM(10);
+    text-align: left;
+    
+    .cta-card {
+      &__text {
+        margin-bottom: toREM(23);
+
+        p {
+          font-size: toREM(18);
+        }
+      }
+
+      &__btn > a {
+        padding: toREM(17) toREM(24);
+        border-radius: toREM(34);
+        font-size: toREM(16);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  .rsv-podcast {
+    &__header {
+      h2 {
+        margin-bottom: toREM(24);
+      }
+    }
+
+    &__cta-card {
+      padding: toREM(14) toREM(61) toREM(14) toREM(49);
+      max-width: toREM(1021);
+
+      .cta-card {
+        &__btn > a {
+          padding: toREM(28) toREM(35);
+        }
+      }
+    }
+  }
+}

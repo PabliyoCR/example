@@ -1,0 +1,107 @@
+@import "../../../../assets/scss/custom";
+
+:host {
+  padding: toREM(58) 0 toREM(18);
+}
+
+.race {
+  &__image {
+    margin-bottom: toREM(34);
+  }
+
+  &__header {
+    margin-bottom: toREM(69);
+  }
+
+  &__icons {
+    margin-bottom: toREM(80);
+    
+    &__container {
+      &:not(:last-child) {
+        margin-bottom: toREM(62);
+      }
+    }
+  }
+
+  &__icon {
+    &__image {
+      margin-bottom: toREM(30);
+    }
+  }
+
+  &__banner {
+    &__game {
+      width: 100%;
+      height: toREM(600);
+      border: solid 8px $secondary;
+    }
+
+    &__icon {
+      text-align: right;
+      cursor: pointer;
+    }
+  }
+}
+
+.carousel-indicators{
+  margin-bottom: 0;
+  bottom: -6%;
+
+
+  button{
+    width: toREM(15);
+		height: toREM(15);
+		background: rgba(163, 163, 163, 1);
+    border-top: unset;
+    // border-bottom: unset;
+		// border-radius: 100%; 
+  }
+
+}
+
+.dots{
+  &__dot{
+    width: toREM(14);
+    height: toREM(14);
+    margin-right:toREM(15);
+    background: rgba(163, 163, 163, 1);
+    border-radius: 100%; 
+    opacity: .5;
+
+    &--active{
+      opacity: 1;
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  :host {
+    padding: toREM(65) 0 toREM(106);
+  }
+
+  .race {
+    &__image {
+      margin-bottom: toREM(23);
+    }
+
+    &__header {
+      margin-bottom: toREM(85);
+    }
+
+    &__icons {
+      margin-bottom: 0;
+      width: toREM(325);
+
+      h2 {
+        font-size: toREM(28);
+      }
+    }
+
+    &__banner {
+      &__game {
+        width: toREM(471);
+        height: toREM(821);
+      }
+    }
+  }
+}

@@ -1,0 +1,10 @@
+<div class="card-body d-flex flex-column justify-content-center">
+  <p class="lead {{ data.titleClass }}" [ngClass]="{'mb-0': !data.text, 'mb-1 mb-md-2': data.text}"
+    [innerHTML]="data.title">
+  </p>
+  <p class="card-text mb-0" [innerHTML]="data.text" *ngIf="data.text"></p>
+</div>
+<a [href]="data.button.url" [attr.rel]="data.button.url.startsWith('https://game') ? 'noopener' : null" [attr.target]="data.button.url.startsWith('https://game') ? '_blank' : null"  class="card-footer bg-primary" [attr.data-bs-toggle]="data.modal ? 'modal' : null"
+  [attr.data-bs-target]="data.modal ? data.modal : null">
+  <p class="mb-0 text-uppercase"><strong [innerHTML]="data.button.text"></strong></p>
+</a>

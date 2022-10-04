@@ -1,0 +1,153 @@
+@import "../../../../assets/scss/custom";
+:host {
+    @include media-breakpoint-down(md) {
+        padding: toREM(20) 0;
+    }
+}
+
+.modal {
+    &-dialog {
+        max-width: $modal-sm;
+        margin: 0px auto;
+        @include media-breakpoint-up(md) {
+            max-width: toREM(584);
+        }
+    }
+    &-content {
+        padding: toREM(49) toREM(20) toREM(71) toREM(10);
+        @include media-breakpoint-up(md) {
+            padding: toREM(38) toREM(46) toREM(32) toREM(53);
+        }
+    }
+    &-body {
+        padding: 0;
+    }
+    &-close {
+        width: toREM(20);
+        height: toREM(20);
+        top: toREM(14);
+        right: toREM(17);
+        cursor: pointer;
+    }
+}
+
+.form {
+    &__header {
+        margin-bottom: toREM(40);
+        @include media-breakpoint-up(md) {
+            margin-bottom: toREM(46);
+        }
+    }
+    &__controls {
+        // max-width: toREM(271);
+        // @include media-breakpoint-up(md) {
+        //   max-width: toREM(649);
+        // }
+        .radio {
+            margin-bottom: toREM(60);
+            &:last-child {
+                margin-bottom: toREM(50);
+            }
+            &__labels {
+                p {
+                    font-size: toREM(14);
+                }
+                @include media-breakpoint-up(md) {
+                    width: toREM(420);
+                }
+            }
+            &__options {
+                @include media-breakpoint-up(md) {
+                    width: toREM(330);
+                    margin-bottom: toREM(20);
+                }
+            }
+        }
+        input {
+            &::placeholder {
+                /* Chrome, Firefox, Opera, Safari 10.1+ */
+                font-style: italic;
+            }
+            &:-ms-input-placeholder {
+                /* Internet Explorer 10-11 */
+                font-style: italic;
+            }
+            &::-ms-input-placeholder {
+                /* Microsoft Edge */
+                font-style: italic;
+            }
+        }
+    }
+    &__invalid {
+        border-color: $danger;
+        &::placeholder {
+            /* Chrome, Firefox, Opera, Safari 10.1+ */
+            color: $danger;
+        }
+        &:-ms-input-placeholder {
+            /* Internet Explorer 10-11 */
+            color: $danger;
+        }
+        &::-ms-input-placeholder {
+            /* Microsoft Edge */
+            color: $danger;
+        }
+    }
+    &-check {
+        padding-left: 0;
+        @include media-breakpoint-down(md) {
+            margin-right: 0;
+            max-width: toREM(38);
+        }
+        @include media-breakpoint-up(md) {
+            margin-left: toREM(17);
+        }
+        &-input {
+            margin-left: toREM(2);
+            margin-right: toREM(6);
+            width: toREM(21);
+            height: toREM(21);
+            @include media-breakpoint-up(md) {
+                margin-left: -1.7em;
+                width: 1.2em;
+                height: 1.2em;
+            }
+        }
+    }
+    label {
+        margin-top: toREM(3);
+        font-size: toREM(16);
+    }
+    small {
+        padding-left: toREM(9);
+        font-size: toREM(10);
+        line-height: 1.1;
+        @include media-breakpoint-up(md) {
+            padding-left: toREM(13);
+        }
+        a {
+            text-decoration: underline;
+        }
+    }
+    // &__initial {
+    //   h4 {
+    //     @include media-breakpoint-down(md) {
+    //       text-align: center;
+    //     }
+    //   }
+    // }
+    &__terms {
+        @include media-breakpoint-down(md) {
+            max-width: toREM(264);
+            margin: 0px auto;
+        }
+    }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+input:-webkit-autofill:active {
+    transition: background-color 5000s ease-in-out 0s;
+    -webkit-text-fill-color: $gray-500 !important;
+}

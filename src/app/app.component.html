@@ -1,0 +1,10 @@
+<header app-header></header>
+<main>
+    <router-outlet></router-outlet>
+</main>
+<section app-join></section>
+<section app-references *ngIf="checkNotUrl('/expert-insights') && checkNotUrl('/racer-game') && checkNotUrl('/site-map')"></section>
+<footer app-footer></footer>
+<div app-form-modal></div>
+<div app-survey-modal></div>
+<div app-game-modal *ngIf="checkUrl('/racer-game')"></div>

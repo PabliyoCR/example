@@ -1,0 +1,61 @@
+@import "../../../../assets/scss/custom";
+
+:host {
+  padding-top: toREM(60);
+}
+
+.rvs-resources {
+  &__title {
+    font-size: toREM(26);
+    text-align: center;
+    text-transform: none;
+  }
+
+  &__text {
+    text-align: center;
+  }
+
+  &__button {
+    width: toREM(298);
+    padding: toREM(10) toREM(17) toREM(10) toREM(13);
+    margin-bottom: toREM(35);
+
+    .download {
+      &__icon {
+        width: toREM(28);
+      }
+    }
+
+    .button {
+      &__title {
+        font-size: toREM(16);
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  :host {
+    padding-top: toREM(45);
+  }
+
+  .rvs-resources {
+    &__title {
+      font-size: toREM(28);
+      text-align: left;
+    }
+
+    &__text {
+      text-align: left;
+    }
+
+    &__button {
+      padding: toREM(8) toREM(17) toREM(8) toREM(13);
+      margin-bottom: 0;
+    }
+    &__right{
+      padding-left: toREM(56);
+      padding-top: toREM(5);
+    }
+  }
+}

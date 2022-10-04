@@ -1,0 +1,82 @@
+@import "../../../../assets/scss/custom";
+
+:host {
+  padding: toREM(55) 0 toREM(50);
+}
+
+.speaker-series {
+  &__header {
+    margin-bottom: toREM(52);
+  }
+
+  &__cta-card {
+    padding: toREM(33) toREM(25) toREM(27);
+    margin-bottom: toREM(39);
+    background-color: $primary;
+    border-radius: toREM(25);
+    text-align: left;
+    
+    .cta-card {
+      &__text {
+        margin-bottom: toREM(30);
+
+        h3 {
+          font-size: toREM(25);
+          line-height: toREM(30);
+        }
+      }
+
+      &__btn > a {
+        padding: toREM(17) toREM(40);
+        font-size: toREM(16);
+      }
+    }
+  }
+
+  &__picture {
+    margin-bottom: toREM(40);
+  }
+
+  &__small {
+    small {
+      font-size: toREM(10);
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  :host {
+    padding: toREM(112) 0 toREM(72);
+  }
+
+  .speaker-series {
+    &__header {
+      margin-bottom: toREM(39);
+    }
+
+    &__cta-card {
+      width: toREM(860);
+      padding: toREM(18) toREM(32) toREM(18) toREM(46);
+      margin-bottom: toREM(64);
+
+      .cta-card {
+        &__text {
+          margin-bottom: 0;
+
+          h3 {
+            font-size: toREM(25);
+          }
+        }
+
+        &__btn > a {
+          padding: toREM(28) toREM(40);
+          border-radius: toREM(34);
+        }
+      }
+    }
+
+    &__picture {
+      margin-bottom: toREM(21);
+    }
+  }
+}

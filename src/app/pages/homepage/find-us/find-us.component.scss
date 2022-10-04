@@ -1,0 +1,91 @@
+@import "../../../../assets/scss/custom";
+
+:host {
+  padding-top: toREM(38);
+  padding-bottom: toREM(43);
+}
+
+.find-us {
+  &__container {
+    h2 {
+      margin-bottom: toREM(25);
+      font-size: toREM(28);
+      text-align: center;
+    }
+  }
+
+  &__dates {
+    .dates {
+      &__title {
+        margin-bottom: toREM(5);
+        font-size: toREM(14);
+        font-weight: $font-weight-bold;
+        text-decoration: underline;
+      }
+
+      &__list {
+        margin-bottom: toREM(20);
+
+        li {
+          font-size: toREM(14);
+
+          &:before {
+            content: '•';
+            padding-right: toREM(5);
+          }
+        }
+      }
+    }
+
+    &-right {
+      .dates__list:last-child {
+        margin-bottom: 0;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  :host {
+    padding: toREM(43) 0 toREM(60);
+  }
+
+  .find-us {
+    &__container {
+      h2 {
+        font-size: toREM(28);
+        text-align: left;
+      }
+
+      p {
+        font-size: toREM(22);
+      }
+    }
+
+    &__dates {
+      width: toREM(445);
+
+      .dates {
+        &__title {
+          margin-bottom: toREM(5);
+          font-size: toREM(16);
+        }
+  
+        &__list {
+          &:not(:last-child) {
+            margin-bottom: toREM(23);
+          }
+  
+          li {
+            font-size: toREM(16);
+  
+            &:before {
+              content: '•';
+              padding-right: toREM(5);
+            }
+          }
+        }
+      }
+    }
+  }
+}

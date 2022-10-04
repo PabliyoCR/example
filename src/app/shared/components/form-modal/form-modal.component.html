@@ -1,0 +1,104 @@
+<div class="modal-dialog modal-dialog-centered">
+  <div class="modal-content position-relative">
+    <div class="modal-body">
+      <div class="form__initial" *ngIf="!formSubmitted && !verificationLinkSenttAlert && !emailVerifiedAlert">
+        <h4 class="text-dark text-justify tex-title mb-2">Enter your email below to receive RSV updates from Sanofi.</h4>
+        <div class="text-justify text-subtitle  mb-3">If you are already registered on other Sanofi sites, please use the same password here.</div>
+        <form [formGroup]="form!" class="form" (ngSubmit)="submitForm($event)">
+          <div class="form__controls mx-auto">
+            <div class="row g-0">
+              <div class="col-12">
+                <small class="text-lg-size mb-2 ps-3">*required fields</small>
+              </div>
+              <div class="col-12 col-md-6 mb-3 pe-md-3" *ngFor="let input of controls; let last = last">
+                <input *ngIf="!last" [type]="input.type" class="form-control" [id]="input.id"
+                  [placeholder]="input.placeholder" [formControlName]="input.id" [attr.maxlength]="input.maxLength"
+                  [ngClass]="{'form__invalid': !form?.get(input.id)?.valid && form?.get(input.id)?.touched}">
+                <input *ngIf="last" [type]="input.type" class="form-control" [id]="input.id"
+                  [placeholder]="input.placeholder" [formControlName]="input.id" [attr.maxlength]="input.maxLength"
+                  [ngClass]="{'form__invalid': !form?.get(input.id)?.valid && form?.get(input.id)?.touched || (form?.errors?.passwordMatch && form?.get(input.id)?.touched) }">
+              </div>
+              <div class="col-12 col-md-6">
+                <small class="mb-3 text-modal-pass text-lg-size">Password must have at least 8 characters and contain at least one uppercase letter,
+                  lowercase
+                  letter, number, and special character.</small>
+              </div>
+              <div class="col-12 col-md-6">
+                <div class="form-check mb-4 mb-md-0">
+                  <input class="form-check-input" formControlName="terms" type="checkbox" value="" id="terms">
+                  <label class="form-check-label text-lg-size" for="terms">
+                    I have read and agreed to the terms <br />and conditions and privacy policy.
+                  </label>
+                  <div class="form__initial-form--top__error"
+                    *ngIf="!form?.get('terms')?.valid && form?.get('terms')?.touched">
+                    <small class="text-danger ps-0">Please confirm</small>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-12">
+              <div class="form__terms text-modal">
+                <small class="mb-2 ps-0 text-lg-size">By submitting the following information, you are acknowledging that you
+                  understand
+                  that the
+                  information you provide may be used by Sanofi and their affiliates, and the business service
+                  companies working with Sanofi to provide you with additional communications and to develop
+                  products and services, which may include market research.</small>
+                <small class="ps-0 text-lg-size">Sanofi respects your interest in keeping your personal health information
+                  private. We will
+                  not sell or rent your information to any third parties or outside mailing lists. For more information
+                  on
+                  our use of information, see our <a
+                    href="https://www.sanofi.com/en/our-responsibility/sanofi-global-privacy-policy"
+                  class="text-tertiary" target="_blank" rel="noopener" interstitial>privacy
+                    policy</a>.</small>
+              </div>
+            </div>
+          </div>
+          <div class="row mt-3">
+            <div class="col-12 col-md-6">
+              <!-- <ngx-recaptcha2 #captchaElem [siteKey]="siteKey!" (success)="handleSuccess($event)"
+              formControlName="recaptcha">
+            </ngx-recaptcha2>
+            <div class="form__initial-form--top__error"
+              *ngIf="!form?.get('recaptcha')?.valid && form?.get('recaptcha')?.touched">
+              <small class="text-danger ps-0">Please verify that you are not a robot</small>
+            </div> -->
+            </div>
+            <div class="col-12">
+              <button type="submit" class="btn btn btn-primary btn-submit mt-3 mx-auto d-block">GET UPDATES</button>
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="form__thankyou text-center" *ngIf="formSubmitted">
+        <h4 class="text-dark mb-2">THANK YOU</h4>
+        <small>Your information has been submitted.</small>
+      </div>
+
+      <div class="form__thankyou text-center" *ngIf="verificationLinkSenttAlert">
+        <h4 class="text-dark mb-2">ALMOST DONE!</h4>
+        <small>A verification link has been sent to your <br> email address. Click the link to activate your <br>
+          account and get started.</small>
+      </div>
+
+      <div class="form__thankyou text-center" *ngIf="emailVerifiedAlert">
+        <h4 class="text-dark mb-2">EMAIL VERIFIED</h4>
+        <small>Your email has been verified. <br class="d-md-none"> Please click the button below <br class="d-md-none">
+          to sign in and get started.</small>
+        <button class="btn btn-sm btn-primary mt-3" (click)="showThankYouModal()"> Continue</button>
+      </div>
+
+    </div>
+    <div class="modal-close position-absolute" data-bs-dismiss="modal">
+      <svg id="close_icon" data-name="close icon" xmlns="http://www.w3.org/2000/svg" width="19.875" height="19.875"
+        viewBox="0 0 19.875 19.875">
+        <rect id="Rectangle" width="26" height="2.108" transform="translate(0 18.385) rotate(-45)" />
+        <rect id="Rectangle_Copy" data-name="Rectangle Copy" width="26" height="2.108"
+          transform="translate(1.491 0) rotate(45)" />
+      </svg>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,90 @@
+@import "../../../../assets/scss/custom";
+
+#rvs-quote {
+  padding: toREM(52) 0 toREM(75);
+}
+
+.rvs-quote {
+  &__container {
+    margin-bottom: toREM(16);
+    border-left: 4px solid $tertiary;
+    border-right: 4px solid $tertiary;
+  }
+
+  &__quote {
+    @include media-breakpoint-down(md) {
+      padding: toREM(7) toREM(12) toREM(7) toREM(24);
+    }
+
+    margin-bottom: 0;
+    font-size: toREM(28);
+    text-indent: toREM(-13);
+    text-transform: none;
+
+    sup.quote-sup {
+      font-size: toREM(16) !important;
+      top: toREM(-10) !important;
+    }
+
+    &.font-22-mob {
+      @include media-breakpoint-down(md) {
+        font-size: toREM(22);
+      }
+    }
+  }
+
+  &__doctor {
+    margin-right: toREM(21);
+    margin-bottom: toREM(50);
+    text-align: right;
+    font-size: toREM(20);
+    font-weight: $font-weight-bold;
+
+    &.font-16-mob {
+      @include media-breakpoint-down(md) {
+        font-size: toREM(16);
+      }
+    }
+  }
+
+  &__cta {
+    a {
+      color: $tertiary;
+      text-decoration: underline;
+
+      &:hover {
+        text-decoration: none;
+      }
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  #rvs-quote {
+    padding: toREM(68) 0;
+  }
+
+  .rvs-quote {
+    &__container {
+      width: toREM(910);
+      margin-bottom: toREM(71);
+      padding: 0 toREM(37);
+      padding-right: toREM(43);
+    }
+  
+    &__quote {
+      margin-bottom: toREM(20);
+      line-height: toREM(36);
+    }
+  
+    &__doctor {
+      margin-right: 0;
+      margin-bottom: 0;
+    }
+  
+    &__cta {
+      margin-bottom: 0;
+      font-size: toREM(20);
+    }
+  }
+}

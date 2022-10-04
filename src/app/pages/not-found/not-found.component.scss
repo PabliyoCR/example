@@ -1,0 +1,15 @@
+@import "../../../assets/scss/custom";
+
+:host {
+  padding-top: toREM(25);
+
+  @include media-breakpoint-up(md) {
+    padding-top: toREM(100);
+  }
+}
+
+.not-found {
+  &__picture {
+    margin-left: toREM(-10);
+  }
+}

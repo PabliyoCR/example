@@ -1,0 +1,54 @@
+<div class="container-md">
+  <div class="row">
+    <div class="col-12">
+      <div class="wrapper" [ngClass]="{ 'wrapper--1035': checkUrl('/'), 'wrapper--1130': checkUrl('/about-rsv') }">
+
+        <div class="references__homepage" *ngIf="checkUrl('/')">
+          <small>
+            <strong>Reference: 1.</strong> Arriola CS, Kim L, Langley G, et al.
+            Estimated burden of community-onset respiratory virus–associated
+            hospitalizations among children aged &#x3C;2 years in the United
+            States, 2014-15. <em>J Pediatric Infect Dis Soc</em>.
+            2020;9(5):587-595.
+            <!-- <strong>2.</strong> Leader S, Kohlhase K. Recent trends in severe respiratory syncytial virus (RSV) among US
+            infants, 1997 to 2000. <em>J Pediatr</em>. 2003;143(5 Suppl):S127-S132. doi:10.1067/s0022-3476(03)00510-9.
+            <strong>3.</strong> Zhou H, Thompson WW, Viboud CG, et al. Hospitalizations associated with influenza and
+            respiratory syncytial virus in the United States, 1993-2008. <em>Clin Infect Dis</em>. 2012;54(10):1427-1436.
+            <strong>4.</strong> Krilov LR, Fergie J, Goldstein M, Brannman L. Impact of the 2014 American Academy of
+            Pediatrics immunoprophylaxis policy on the rate, severity, and cost of respiratory syncytial virus
+            hospitalizations among preterm infants. <em>Am J Perinatol</em>. 2020;37(2):174-183.
+            <strong>5.</strong> Rainisch G, Adhikari B, Meltzer MI, Langley G. Estimating the impact of multiple
+            immunization products on medically-attended respiratory syncytial virus (RSV) infections in infants.
+            <em>Vaccine</em>. 2020;38(2):251-257.<strong>6.</strong>
+            Li Y, Reeves RM, Wang X, et al. Global patterns in monthly activity of influenza virus, respiratory syncytial
+            virus, parainfluenza virus, and metapneumovirus: a systematic analysis. <em>Lancet Glob Health</em>.
+            2019;8(7):e1031-e1045. -->
+          </small>
+        </div>
+        
+        <div *ngIf="checkUrl('/about-rsv')">
+          <small>
+            <strong>References: </strong>
+            <strong>1.</strong> Piedimonte G, Perez MK. Respiratory syncytial virus infection and bronchiolitis. <em>Pediatr Rev</em>. <span class="text-nowrap">2014;35(12):519-530. </span>
+            <strong>2.</strong> Schweitzer JW, Justice NA. Respiratory syncytial virus infection. <em>StatPearls [Internet]</em>. 2021.
+            <strong>3.</strong> Yamin D, Jones FK, DeVincenzo JP, et al. Vaccination strategies against respiratory syncytial virus. <em>Proc Natl Acad Sci USA</em>. <span class="text-nowrap">2016;113(46):13239-13244.</span> doi: 10.1073/pnas.1522597113.
+            <strong>4.</strong> Leader S, Kohlhase K. Recent trends in severe respiratory syncytial virus (RSV) among US infants, 1997 to 2000. <em>J Pediatr</em>. <span class="text-nowrap">2003;143(5 suppl):S127-S132. </span>
+            <strong>5.</strong> Arriola CS, Kim L, Langley G, et al. Estimated burden of community-onset respiratory <span class="text-nowrap">virus–associated</span> hospitalizations among children aged &#60;2 years in the United States, 2014-15. <em>J Pediatric Infect Dis Soc</em>. 2020;9(5):587-595.
+            <strong>6.</strong> Shi T, McAllister DA, O’Brien KL, et al. Global, regional, and national disease burden estimates of acute lower respiratory infections due to respiratory syncytial virus in young children in 2015: a systematic review and modelling study. <em>Lancet</em>. 2017;390(10098):946-958.
+            <strong>7.</strong> Obando-Pacheco P, Justicia-Grande AJ, Rivero-Calle I, et al. Respiratory syncytial virus seasonality: a global overview. <em>J Infect Dis</em>. <span class="text-nowrap">2018;217(9):1356-1364. </span>
+            <strong>8.</strong> Centers for Disease Control and Prevention. Respiratory Syncytial Virus Infection (RSV) Trends and Surveillance. <span class="text-nowrap">https://www.cdc.gov/rsv/research/us-surveillance.html.</span> Accessed November 2021.
+            <strong>9.</strong> Agha R, Avner JR. Delayed seasonal RSV surge observed during the <span class="text-nowrap">COVID-19</span> pandemic. <em>Pediatrics</em>. 2021;148(3):e2021052089.
+            <strong>10.</strong> Centers for Disease Control and Prevention. RSV national trends. <span class="text-nowrap">https://www.cdc.gov/surveillance/nrevss/rsv/natl-trend.html.</span> Accessed May 6, 2022.
+            <strong>11.</strong> Reeves RM, Hardelid P, Panagiotopoulos N, et al. Burden of hospital admissions caused by respiratory syncytial virus (RSV) in infants in England: a data linkage modelling study. <em>J Infect</em>. <span class="text-nowrap">2019;78:468-475. </span>
+            <strong>12.</strong> Meissner CH. Viral bronchiolitis in children. <em>N Engl J Med</em>. <span class="text-nowrap">2016;374:62-72. </span>
+            <strong>13.</strong> Centers for Disease Control and Prevention. RSV in infants and young children. <span class="text-nowrap">https://www.cdc.gov/rsv/high-risk/infants-young-children.html.</span> Accessed December 7, 2021.
+            <strong>14.</strong> Zhou H, Thompson WW, Viboud CG, et al. Hospitalizations associated with influenza and respiratory syncytial virus in the United States, 1993-2008. <em>Clin Infect Dis</em>. <span class="text-nowrap">2012;54(10):1427-1436. </span>
+            <strong>15.</strong> Krilov LR, Fergie J, Goldstein M, Brannman L. Impact of the 2014 American Academy of Pediatrics immunoprophylaxis policy on the rate, severity, and cost of respiratory syncytial virus hospitalizations among preterm infants. <em>Am J Perinatol</em>. 2020;37(2):174-183.
+            <strong>16.</strong> Rainisch G, Adhikari B, Meltzer MI, Langley G. Estimating the impact of multiple immunization products on <span class="text-nowrap">medically-attended</span> respiratory syncytial virus (RSV) infections in infants. <em>Vaccine</em>. 2020;38(2):251-257.
+            <strong>17.</strong> Li Y, Reeves RM, Wang X, et al. Global patterns in monthly activity of influenza virus, respiratory syncytial virus, parainfluenza virus, and metapneumovirus: a systematic analysis. <em>Lancet Glob Health</em>. 2019;8(7):e1031-e1045.
+          </small>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

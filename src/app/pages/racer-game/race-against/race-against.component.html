@@ -1,0 +1,183 @@
+<div class="container-md">
+  <div class="row">
+    <div class="col-12">
+      <div class="text-center">
+        <div class="race__image">
+          <picture app-picture [data]="{
+            image: 'racer-game/race-against/race',
+            format: '',
+            altext: 'Infant illustration',
+            webp: true,
+            mobile: false,
+            classes: '',
+            width: '117',
+            height: '117'
+          }">
+          </picture>
+        </div>
+
+        <div class="race__header">
+          <h2 class="mb-md-4">Race to protect all infants game</h2>
+          <p class="mb-2">Test your RSV knowledge and challenge your peers about the unpredictability of severe RSV <br class="d-none d-md-inline"/>disease in ALL infants in this fast-paced, educational game!</p>
+        </div>
+
+        <!-- <div class="race__video">
+          <picture app-picture [data]="{
+            image: 'homepage/race-against/video',
+            format: '',
+            altext: '',
+            webp: true,
+            mobile: true,
+            classes: '',
+            width: '1130',
+            height: '437'
+          }">
+          </picture>
+        </div> -->
+        <!-- <a href="https://game-portal.gameloft.com/2093/sites/RSVRacer/" target="_blank" rel="noopener" class="btn btn-sm btn-primary mb-5 mt-md-2">Play Now</a>
+        <div class="d-none d-md-block mb-5">
+          <picture app-picture [data]="{
+            image: 'homepage/slider/slide-1',
+            format: '',
+            altext: 'RSV Racer game start screen',
+            webp: true,
+            mobile: false,
+            classes: 'me-md-3',
+            width: '242',
+            height: '498'
+          }">
+          </picture>
+          <picture app-picture [data]="{
+            image: 'homepage/slider/slide-2',
+            format: '',
+            altext: 'Race against RSV game play screen',
+            webp: true,
+            mobile: false,
+            classes: 'me-md-3',
+            width: '242',
+            height: '498'
+          }">
+          </picture>
+
+          <picture app-picture [data]="{
+            image: 'homepage/slider/slide-3',
+            format: '',
+            altext: 'Race against RSV game quiz screen',
+            webp: true,
+            mobile: false,
+            classes: '',
+            width: '242',
+            height: '498'
+          }">
+          </picture>
+
+        </div>
+
+        <div class="d-block d-md-none">
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators" (click)=changeImage($event)>
+              <div class="dots__dot" data-slide="0"></div>
+              <div class="dots__dot" data-slide="1"></div>
+              <div class="dots__dot" data-slide="2"></div>
+            </div>
+            <div class="carousel-inner">
+              <div class="carousel-item active carousel-item--0" (swipeLeft)="handleSwipe('1')" (swipeRight)="handleSwipe('2')">
+                <picture app-picture [data]="{
+                  image: 'homepage/slider/slide-1',
+                  format: '',
+                  altext: 'RSV Racer game start screen',
+                  webp: false,
+                  mobile: false,
+                  classes: 'me-md-3',
+                  width: '285',
+                  height: '495'
+                }">
+                </picture>
+              </div>
+              <div class="carousel-item active carousel-item--1" (swipeLeft)="handleSwipe('2')" (swipeRight)="handleSwipe('0')">
+                <picture app-picture [data]="{
+                  image: 'homepage/slider/slide-2',
+                  format: '',
+                  altext: 'Race against RSV game play screen',
+                  webp: false,
+                  mobile: false,
+                  classes: 'me-md-3',
+                  width: '285',
+                  height: '495'
+                }">
+                </picture>
+              </div>
+              <div class="carousel-item active carousel-item--2" (swipeLeft)="handleSwipe('0')" (swipeRight)="handleSwipe('1')">
+                <picture app-picture [data]="{
+                  image: 'homepage/slider/slide-3',
+                  format: '',
+                  altext: 'Race against RSV game quiz screen',
+                  webp: false,
+                  mobile: false,
+                  classes: 'me-md-3',
+                  width: '285',
+                  height: '495'
+                }">
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div> -->
+
+        <div class="race__container wrapper wrapper--1000 d-flex flex-column flex-md-row justify-content-between mx-auto">
+          <div class="race__icons">
+            <h2 class="text-dark mb-5 mt-md-3">How to Play</h2>
+            <div class="row">
+              <div class="race__icons__container col-12 px-3" *ngFor="let icon of data">
+                <div class="race__icon">
+                  <div class="race__icon__image">
+                    <picture app-picture [data]="{
+                      image: icon.picture.image,
+                      format: icon.picture.format,
+                      altext: icon.picture.altext,
+                      webp: icon.picture.webp,
+                      mobile: icon.picture.mobile,
+                      classes: icon.picture.classes,
+                      width: icon.picture.width,
+                      height: icon.picture.height
+                    }">
+                    </picture>
+                  </div>
+                  <p [innerHTML]="icon.text" class="lead mb-0"></p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="race__banner d-flex flex-column flex-md-row align-items-md-end">
+            <div class="race__banner__game mb-3 mb-md-0 me-md-3">
+              <!-- using original iframe from https://game-portal.gameloft.com/2093/sites/RSVRacer/ to adapt all screen sizes -->
+              <iframe id="gameIFrame" class="w-100 h-100" src="https://oms.gameloft.com/iframe/?message=U2FsdGVkX18r446XTeMv93xVT07Ffk9YCrixrOAdW0xYlCIsAUIgfHtmNzPhAW7EPEVdXgLT1zc6Dq9HFPQTUQq3MLCb%2FTcYuyxU%2Fh38RWE%3D" frameborder="0"></iframe>
+              <!-- <picture app-picture [data]="{
+                image: 'racer-game/race-against/all-infants-banner',
+                format: 'png',
+                altext: '',
+                webp: true,
+                mobile: true,
+                width: '471',
+                height: '821'
+              }">
+              </picture> -->
+            </div>
+            <a class="race__banner__icon text-right" [attr.data-bs-toggle]="'modal'" [attr.data-bs-target]="'#gameModal'" (click)="reloadIframe()">
+              <picture app-picture [data]="{
+                image: 'racer-game/race-against/expand-icon',
+                format: 'png',
+                altext: '',
+                webp: true,
+                mobile: false,
+                width: '40',
+                height: '40'
+              }">
+              </picture>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>

@@ -1,0 +1,36 @@
+@import "../../../../assets/scss/custom";
+
+:host {
+  padding: toREM(61) 0 toREM(58);
+  background-color: rgba($tertiary, .1);
+}
+
+h2 {
+  padding-left: toREM(20);
+  padding-right: toREM(20);
+  margin-bottom: toREM(36);
+  font-size: toREM(26);
+  text-transform: none;
+}
+
+.linkedin {
+  padding-right: toREM(15);
+}
+
+.twitter {
+  padding-left:  toREM(15);
+}
+
+
+@include media-breakpoint-up(md) {
+  :host {
+    padding: toREM(34) 0 toREM(30);
+  }
+
+  h2 {
+    margin-bottom: toREM(21);
+  }
+
+ 
+
+}

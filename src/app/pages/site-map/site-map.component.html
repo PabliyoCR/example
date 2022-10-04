@@ -1,0 +1,25 @@
+<section id="site-map">
+  <div class="container-md">
+    <div class="row">
+      <div class="col-12">
+        <div class="site-map">
+          <h2 class="site-map__title mb-4 mb-md-5">SITE MAP</h2>
+          <div class="site-map__container">
+            <div class="site-map__routes" [ngClass]="{ 'mb-5' : route.url==='/racer-game' }" *ngFor="let route of routes">
+              <p class="mb-3"><a [routerLink]="route.url">{{route.text}}</a></p>
+
+              <div class="link__fragments" *ngIf="route.fragments">
+                <p class="mb-3" *ngFor="let fragment of route.fragments">>&nbsp;&nbsp;<a class="mb-3" [routerLink]="fragment.url" [fragment]="fragment.fragment">{{fragment.text}}</a></p>
+              </div>
+            </div>
+
+            <div class="site-map__footer" *ngFor="let route of footer">
+              <p class="mb-3"><a [routerLink]="route.url" *ngIf="!route.href">{{route.text}}</a></p>
+              <p class="mb-3"><a interstitial [attr.href]="route.url" target="_blank" rel="noopener" *ngIf="route.href">{{route.text}}</a></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>

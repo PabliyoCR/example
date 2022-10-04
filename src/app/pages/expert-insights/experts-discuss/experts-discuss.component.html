@@ -1,0 +1,94 @@
+<div class="container-md">
+    <div class="row">
+        <div class="col-12">
+            <div class="experts-discuss__header">
+                <h2 class="text-center mb-4 mb-md-2">
+                    Experts discuss severe RSV disease
+                </h2>
+                <p class="text-left">
+                    How much do you know about severe RSV disease in infants? Dr. Joseph Domachowske and Dr. Jaime Fergie bring their professional experience and clinical expertise to the table to provide valuable insight on RSV and why it’s so important to protect ALL infants
+                    from the risk of severe RSV disease.
+                </p>
+            </div>
+            <div class="experts-discuss__video d-flex flex-column flex-md-row justify-content-between mx-auto">
+
+                <div class="experts-discuss__video__container h-100 position-relative order-md-1">
+                    <video id="video" controls #videoPlayer>
+                      <source
+                        src="/assets/video/32125RP_Sanofi_All Infant Video_MASTER.mp4"
+                        type="video/mp4"
+                      />
+                      <!-- <source src="movie.ogg" type="video/ogg"> -->
+                      Your browser does not support the video tag.
+                    </video>
+                    <div class="placeholder" (click)="playVideo()">
+                        <picture app-picture [data]="{
+                          image: 'expert-insights/experts-discuss/video',
+                          format: '',
+                          altext: '',
+                          webp: true,
+                          mobile: true,
+                          classes: '',
+                          width: '861',
+                          height: '484'
+                        }">
+                        </picture>
+                    </div>
+                    <div class="experts-discuss__video__close position-absolute" *ngIf="isVideoPlaying" (click)="closeVideo()">
+                        <svg viewBox="0 0 32 32" xmlns="http://www.w3.org/2000/svg">
+                          <g id="cross">
+                            <line
+                              fill="none"
+                              stroke="#fff"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2px"
+                              x1="7"
+                              x2="25"
+                              y1="7"
+                              y2="25"
+                            />
+                            <line
+                              fill="none"
+                              stroke="#fff"
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="2px"
+                              x1="7"
+                              x2="25"
+                              y1="25"
+                              y2="7"
+                            />
+                          </g>
+                        </svg>
+                    </div>
+                    <div app-transcript [transcriptText]="videoTranscript"></div>
+                </div>
+            </div>
+
+            <div class="experts-discuss__cta-card bg-tertiary d-flex flex-column flex-md-row justify-content-between align-items-md-center mb-2">
+                <div class="cta-card__text my-md-auto">
+                    <h3 class="text-white">Which infants can be affected <br class="d-md-none" />by RSV?</h3>
+                    <p class="text-white mb-0">
+                        RSV experts discuss the susceptibility and risk of RSV disease in infants and share <br class="d-none d-md-inline" />their practical experience with severe RSV disease.
+                    </p>
+                </div>
+                <div class="cta-card__btn d-flex justify-content-center">
+                    <a href="" target="_blank" rel="noopener" class="btn btn-white">PLAY VIDEO</a>
+                </div>
+            </div>
+
+            <div class="experts-discuss__cta-card bg-tertiary d-flex flex-column flex-md-row justify-content-between align-items-md-center">
+                <div class="cta-card__text my-md-auto">
+                    <h3 class="text-white">What’s unpredictable <br class="d-md-none" />about RSV?</h3>
+                    <p class="text-white mb-0">
+                        RSV experts discuss the unpredictable nature of severe RSV in infants and <br/>explain the effects of the COVID-19 pandemic on the seasonality of the disease.
+                    </p>
+                </div>
+                <div class="cta-card__btn d-flex justify-content-center">
+                    <a href="" target="_blank" rel="noopener" class="btn btn-white white-alpha">PLAY VIDEO</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

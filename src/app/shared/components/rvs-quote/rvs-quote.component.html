@@ -1,0 +1,15 @@
+<div class="container-md">
+  <div class="row">
+    <div class="col-12">
+      <div class="rvs-quote__container mx-auto">
+        <h2 class="rvs-quote__quote {{ quote.quote.class }}" [innerHTML]="quote.quote.text"></h2>
+        <p class="text-black rvs-quote__doctor {{ quote.doctor.class }} d-none d-md-block" [innerHTML]="quote.doctor.text"></p>
+      </div>
+      <p class="text-black rvs-quote__doctor {{ quote.doctor.class }} d-md-none" [innerHTML]="quote.doctor.text"></p>
+      <p class="text-black text-center rvs-quote__cta">
+        <a [routerLink]="'/expert-insights'">Watch RSV experts</a> discuss the risks of
+        <br class="d-md-none" />severe RSV disease.
+      </p>
+    </div>
+  </div>
+</div>

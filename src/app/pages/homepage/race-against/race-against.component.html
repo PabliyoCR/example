@@ -1,0 +1,178 @@
+<div class="container-md">
+  <div class="row">
+    <div class="col-12">
+      <div
+        class="race d-flex flex-column flex-md-row justify-content-between mx-auto"
+      >
+        <div class="race__text order-md-2">
+          <h2 class="mb-4">Race to PROTECT ALL Infants Game</h2>
+          <p class="text-left">
+            Test your RSV knowledge and challenge your peers about the
+            unpredictability of severe RSV disease in ALL infants in this
+            fast-paced, educational game!
+          </p>
+          <a
+            [routerLink]="'/racer-game'"
+            class="race__btn btn btn-sm btn-primary d-none d-md-block"
+            >Play Now</a
+          >
+        </div>
+
+        <div class="race__img order-md-1 me-md-3">
+          <picture
+            app-picture
+            [data]="{
+              image: 'homepage/slider/slide-1',
+              format: '',
+              altext: 'Race against RSV game quiz screen',
+              webp: false,
+              mobile: false,
+              classes: '',
+              width: '285',
+              height: '495'
+            }"
+          >
+          </picture>
+        </div>
+
+        <a
+          [routerLink]="'/racer-game'"
+          class="race__btn btn btn-sm btn-primary d-md-none mx-auto"
+          >Play Now</a
+        >
+
+        <!-- <div class="race__video">
+          <picture app-picture [data]="{
+            image: 'homepage/race-against/video',
+            format: '',
+            altext: '',
+            webp: true,
+            mobile: true,
+            classes: '',
+            width: '1130',
+            height: '437'
+          }">
+          </picture>
+        </div> -->
+
+        <!-- <div class="d-none d-md-block mb-5">
+          <picture
+            app-picture
+            [data]="{
+              image: 'homepage/slider/slide-1',
+              format: '',
+              altext: 'RSV Racer game start screen',
+              webp: true,
+              mobile: false,
+              classes: 'me-md-3',
+              width: '242',
+              height: '498'
+            }"
+          >
+          </picture>
+          <picture
+            app-picture
+            [data]="{
+              image: 'homepage/slider/slide-2',
+              format: '',
+              altext: 'Race against RSV game play screen',
+              webp: true,
+              mobile: false,
+              classes: 'me-md-3',
+              width: '242',
+              height: '498'
+            }"
+          >
+          </picture>
+
+          <picture
+            app-picture
+            [data]="{
+              image: 'homepage/slider/slide-3',
+              format: '',
+              altext: 'Race against RSV game quiz screen',
+              webp: true,
+              mobile: false,
+              classes: '',
+              width: '242',
+              height: '498'
+            }"
+          >
+          </picture>
+        </div> -->
+
+        <!-- <div class="d-block d-md-none">
+          <div id="carouselExampleIndicators" class="carousel slide">
+            <div class="carousel-indicators" (click)="changeImage($event)">
+              <div class="dots__dot" data-slide="0"></div>
+              <div class="dots__dot" data-slide="1"></div>
+              <div class="dots__dot" data-slide="2"></div>
+            </div>
+            <div class="carousel-inner">
+              <div
+                class="carousel-item active carousel-item--0"
+                (swipeLeft)="handleSwipe('1')"
+                (swipeRight)="handleSwipe('2')"
+              >
+                <picture
+                  app-picture
+                  [data]="{
+                    image: 'homepage/slider/slide-1',
+                    format: '',
+                    altext: 'RSV Racer game start screen',
+                    webp: false,
+                    mobile: false,
+                    classes: 'me-md-3',
+                    width: '285',
+                    height: '495'
+                  }"
+                >
+                </picture>
+              </div>
+              <div
+                class="carousel-item active carousel-item--1"
+                (swipeLeft)="handleSwipe('2')"
+                (swipeRight)="handleSwipe('0')"
+              >
+                <picture
+                  app-picture
+                  [data]="{
+                    image: 'homepage/slider/slide-2',
+                    format: '',
+                    altext: 'Race against RSV game play screen',
+                    webp: false,
+                    mobile: false,
+                    classes: 'me-md-3',
+                    width: '285',
+                    height: '495'
+                  }"
+                >
+                </picture>
+              </div>
+              <div
+                class="carousel-item active carousel-item--2"
+                (swipeLeft)="handleSwipe('0')"
+                (swipeRight)="handleSwipe('1')"
+              >
+                <picture
+                  app-picture
+                  [data]="{
+                    image: 'homepage/slider/slide-3',
+                    format: '',
+                    altext: 'Race against RSV game quiz screen',
+                    webp: false,
+                    mobile: false,
+                    classes: 'me-md-3',
+                    width: '285',
+                    height: '495'
+                  }"
+                >
+                </picture>
+              </div>
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </div>
+</div>

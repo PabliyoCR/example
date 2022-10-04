@@ -1,0 +1,53 @@
+<div class="container-md">
+  <div class="row">
+    <div class="col-12">
+      <div
+        id="rvsCarousel"
+        class="rvs__carousel carousel slide mx-auto"
+        data-bs-interval="false"
+      >
+        <div class="carousel-indicators" (click)="changeVideo($event)">
+          <button
+            type="button"
+            data-bs-target="#rvsCarousel"
+            data-bs-slide-to="0"
+            class="dot dot--1 active"
+            aria-current="true"
+            aria-label="Slide 1"
+            #dot1
+          ></button>
+          <button
+            type="button"
+            data-bs-target="#rvsCarousel"
+            data-bs-slide-to="1"
+            class="dot dot--2"
+            aria-label="Slide 2"
+            #dot2
+          ></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item carousel-item--1 active" (swipeLeft)="changeSlide(2)" (swipeRight)="changeSlide(2)">
+            <video class="img-fluid" muted (ended)="changeSlide(2)" #video1>
+              <source
+                src="/assets/video/homepage/carousel/CORECLAIMS_Animation_2_1080x1080.mp4"
+                type="video/mp4"
+              />
+              <!-- <source src="movie.ogg" type="video/ogg"> -->
+              Your browser does not support the video tag.
+            </video>
+          </div>
+          <div class="carousel-item carousel-item--2" (swipeLeft)="changeSlide(1)" (swipeRight)="changeSlide(1)">
+            <video class="img-fluid" muted (ended)="changeSlide(1)" #video2>
+              <source
+                src="/assets/video/homepage/carousel/CORECLAIMS_Animation_1_1080x1080.mp4"
+                type="video/mp4"
+              />
+              <!-- <source src="movie.ogg" type="video/ogg"> -->
+              Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

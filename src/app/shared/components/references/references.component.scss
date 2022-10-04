@@ -1,0 +1,31 @@
+@import '../../../../assets/scss/custom';
+
+:host {
+  padding: toREM(66) 0 toREM(64);
+}
+
+small {
+  font-size: toREM(12);
+  sup {
+    font-size: toREM(7);
+    top: -0.7em;
+  }
+  // strong{
+  //   margin-left: toREM(5);
+  //   margin-right: toREM(5);
+  // }
+}
+
+.references {
+  &__homepage {
+    @include media-breakpoint-down(md) {
+      margin-bottom: toREM(64);
+    }
+  }
+}
+
+@include media-breakpoint-up(md) {
+  :host {
+    padding: toREM(60) 0 toREM(70);
+  }
+}
